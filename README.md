@@ -6,14 +6,8 @@ PyFladesk 1.1  ` pip install PyFladesk `
 
 Windows:
 ` pyinstaller -w -F --add-data "templates;templates" --add-data "static;static" app.py `
-<<<<<<< HEAD
-Windows с консолью
-` pyinstaller -F --add-data "templates;templates" --add-data "static;static" app.py `
-=======
-
 Windows с консолью
 ` pyinstaller -F --add-data "templates;templates" --add-data "static;static" app.py `
 
->>>>>>> c3204d53cc579a420476658caefe6132f9ac7854
 Linux: 
 ` pyinstaller -w -F --add-data "templates:templates" --add-data "static:static" app.py `
