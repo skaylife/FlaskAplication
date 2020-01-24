@@ -38,8 +38,9 @@
 
 {% block content %}
     <div class="col-lg-12">
-        <h1>{{ monitors }}</h1>
-        <h1>Bootstrap - В два клика- {{ monitorss }}</h1>
+
+        <h1>Bootstrap - В два клика</h1>
+
     </div>
 {% endblock %}
 
@@ -47,8 +48,24 @@
 {#    <p><a href="{{ url_for('index') }}">Index</a></p>#}
 {#    <a href="#" class="btn btn-primary active" role="button" aria-pressed="true">Текст кнопки</a>#}
 
-    <a href="{{ url_for('index') }}"><button type="button"  class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top" > Начало </button></a>
-    <a href="{{ url_for('page2') }}"><button type="button"  class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on top" > Page 2 </button></a>
+{#    background-image: url(theme/images/bg.jpg);#}
+    <div>
+        <img src="/static/img/1.jpg" alt="..." class="rounded mx-auto d-block" width="250">
+{#        <h1>Bootstrap - В два клика- {{ monitorss }}</h1>#}
+        <h3>Ваш монитор</h3>
+        <h5>{{ monitors }}</h5>
+
+        <h3>Разрешение</h3>
+        <h5>Высота {{ height }}</h5>
+        <h5>Ширина {{ width }}</h5>
+
+{#        <h5>{{ monitorsss }}</h5>#}
+{#        <h3>Доп параметр</h3>#}
+{#        <h5>{{ monitorss }}</h5>#}
+
+        <a href="{{ url_for('index') }}"><button type="button"  class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top" > Начало </button></a>
+        <a href="{{ url_for('page2') }}"><button type="button"  class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on top" > Page  2</button></a>
+    </div>
 
 
 {#        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">#}
