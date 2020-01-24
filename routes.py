@@ -23,6 +23,7 @@ def page3():
 
     height = windll.user32.GetSystemMetrics(0)  # Высота монитора 1920 px
     width = windll.user32.GetSystemMetrics(1)  # Ширина монитора 1080 px
+
     # monitorss = win32api.EnumDisplayMonitors()
     # monitorsss = win32api.GetMonitorInfo(monitorss[0][0])
     #
