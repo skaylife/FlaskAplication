@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+    <div class="col-lg-12">
+        <h1 > Page2! {{ monitors }} </h1>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <p><a href="{{ url_for('index') }}">Index</a></p>
+    <p><a href="{{ url_for('page3') }}">Page3</a></p>
+    <p><a href="{{ url_for('page4') }}">Page2/2</a></p>
+    <p><a href="{{ url_for('page5') }}">5</a></p>
+{% endblock %}

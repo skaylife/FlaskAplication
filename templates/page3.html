@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Топ софт</title>
+
+
+
+
+
+
+  </head>
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+{% block content %}
+    <div class="col-lg-12">
+
+        <h1>Bootstrap - В два клика</h1>
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+{#    <p><a href="{{ url_for('index') }}">Index</a></p>#}
+{#    <a href="#" class="btn btn-primary active" role="button" aria-pressed="true">Текст кнопки</a>#}
+
+{#    background-image: url(theme/images/bg.jpg);#}
+    <div>
+        <img src="/static/img/1.jpg" alt="..." class="rounded mx-auto d-block" width="250">
+{#        <h1>Bootstrap - В два клика- {{ monitorss }}</h1>#}
+        <h3>Ваш монитор</h3>
+        <h5>{{ monitors }}</h5>
+
+        <h3>Разрешение</h3>
+        <h5>Высота {{ height }}</h5>
+        <h5>Ширина {{ width }}</h5>
+                <h3>Дополнительная информация</h3>
+        <h5>Разрешение второго монитора {{ TwoMon }}</h5>
+        <p></p>
+
+                    <h3>Дополнительная информация о ПК</h3>
+        <h5>{{ name }}</h5>
+        <h5>{{ version }}</h5>
+        <h5>{{ proc_info }}</h5>
+        <h5>{{ system_ram }}</h5>
+        <h5>{{ gpu }}</h5>
+
+
+{#        <h5>{{ monitorsss }}</h5>#}
+{#        <h3>Доп параметр</h3>#}
+{#        <h5>{{ monitorss }}</h5>#}
+
+    <a href="{{ url_for('menu') }}"><button type="button" class="btn btn-info btn-lg">В меню</button></a>
+    <a href="{{ url_for('ColorBlack') }}"><button type="button" class="btn btn-warning btn-lg">К цветовому тесту</button></a>
+    <a href="{{ url_for('page5') }}"><button type="button" class="btn btn-danger btn-lg">К тесту с анимацией</button></a>
+
+
+{% endblock %}
+
+
+

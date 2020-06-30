@@ -1,0 +1,296 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+
+
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Helvetica', sans-serif;
+	background: rgb(26, 188, 156);
+	background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+	background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+}
+
+h1 {
+	font-size: 24px;
+	margin: 10px 0 0 0;
+	font-weight: lighter;
+	text-transform: uppercase;
+	color: #eeeeee;
+}
+
+p {
+	font-size: 12px;
+	font-weight: light;
+	color: #333333;
+}
+
+span a {
+	font-size: 18px;
+	color: #cccccc;
+	text-decoration: none;
+	margin: 0 10px;
+	transition: all 0.4s ease-in-out;
+	&:hover {
+		color: #ffffff;
+	}
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatar {
+	width: 150px;
+	height: 150px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+}
+
+.content {
+	width: 100%;
+	max-width: 600px;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+<div class="container">
+	<div class="avatar">
+		<a href="#">
+			<img src="https://i.ibb.co/V9fxhxR/imgonline-com-ua-Resize-O7-Jgh-X5eo-E.jpg" alt="imgonline-com-ua-Resize-O7-Jgh-X5eo-E" border="0">
+		</a>
+	</div>
+	<div class="content">
+		<h1>Floating CSS animation</h1>
+        <h2>Vanilla Javascript push menu</h2>
+        <p>Sometimes you just need a really simple push menu, without any Javascript Libraries. I made this in a rush for a client with the instructions to not use any jQuery.</p>
+        <p>I like the thought of adding a class to the body and climb the DOM instead of adding classes to the affected elements.</p>
+        <p>Less is more.</p>
+
+
+
+
+
+
+
+		<p>BY: Mario Duarte</p>
+
+
+
+
+
+        <div class="phone">
+  <input type="radio" name="s" id="s1">
+  <input type="radio" name="s" id="s2" checked="checked">
+  <input type="radio" name="s" id="s3">
+  <label for="s1"><img src="http://co0kie.github.io/codepen/mobile-nav/facebook.svg" alt=""></label>
+  <label for="s2"><img src="http://co0kie.github.io/codepen/mobile-nav/twitter.svg" alt=""></label>
+  <label for="s3"><img src="http://co0kie.github.io/codepen/mobile-nav/instagram.svg" alt=""><link href="https://ru.imgbb.com/"></label>
+  <div class="circle"></div>
+  <div class="phone_content">
+    <div class="phone_bottom">
+      <span class="indicator"></span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+	</div>
+</div>
+
+
+
+
+
+<style>
+    .phone {
+  width: 320px;
+  height: 260px;
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  justify-content: center;
+}
+.phone::before {
+  content: '';
+  position: absolute;
+  width: 84%;
+  height: 0px;
+  bottom: -10px;
+  box-shadow: 0 0 25px 9px rgba(255, 0, 0, 0.33), 50px 10px 25px 8px rgba(18, 255, 0, 0.33), -40px 8px 25px 9px rgba(242, 255, 0, 0.33);
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.phone::after {
+  content: '';
+}
+.phone_content {
+  filter: contrast(20);
+  width: 100%;
+  background-color: rgba(206, 43, 241, 0);
+  overflow: hidden;
+  position: absolute;
+}
+.phone_bottom {
+  width: 100%;
+  height: 66px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  filter: blur(10px);
+}
+
+input {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  width: 33%;
+  height: 66px;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+}
+label > img {
+  width: 25px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  z-index: 3;
+  transition: 200ms 100ms cubic-bezier(0.14, -0.08, 0.74, 1.4);
+}
+label::before {
+  content: '';
+  position: absolute;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background: black;
+  position: absolute;
+  top: 152px;
+  z-index: 1;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 200ms cubic-bezier(0.14, -0.08, 0.74, 1.4);
+  box-shadow: 0px 82px 20px 0px rgba(128, 128, 128, 0.29);
+}
+
+.indicator {
+  width: 70px;
+  height: 70px;
+  background-image: linear-gradient(0deg, #f7b0b0, rgba(183, 255, 154, 0)), linear-gradient(0deg, rgba(158, 255, 151, 0.75), rgba(183, 255, 154, 0)), linear-gradient(0deg, #b4fffb, rgba(183, 255, 154, 0));
+  background-size: cover;
+  background-position: 0 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: -42px;
+  right: 0;
+  margin: auto;
+  transition: 200ms cubic-bezier(0.14, -0.08, 0.74, 1.4);
+}
+
+#s1:checked ~ [for="s1"] > img {
+  top: -85px;
+}
+#s1:checked ~ .circle,
+#s1:checked ~ div div .indicator {
+  left: -66%;
+}
+
+#s2:checked ~ [for="s2"] > img {
+  top: -85px;
+}
+#s2:checked ~ .circle,
+#s2:checked ~ div div .indicator {
+  left: 0;
+}
+
+#s3:checked ~ [for="s3"] > img {
+  top: -85px;
+}
+#s3:checked ~ .circle,
+#s3:checked ~ div div .indicator {
+  left: 66%;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

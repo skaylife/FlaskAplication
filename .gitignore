@@ -1,0 +1,7 @@
+app.spec
+build
+__pycache__
+dist
+#
+.idea
+venv

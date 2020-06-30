@@ -1,0 +1,107 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FWebTestMON</title>
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+</head>
+
+
+  <style>
+
+    :root {
+      font-size: 20px;
+    }
+
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: #535353;
+    }
+
+
+
+  </style>
+
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">WebTestMON</h3>
+          <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link active" href="{{ url_for('menu') }}">В основное меню</a>
+              <a class="nav-link active" href="{{ url_for('about') }}">Обо мне</a>
+              <a class="nav-link active" href="{{ url_for('page4') }}">Для теста</a>
+              <a class="nav-link" href="https://github.com/skaylife/FlaskAplication">GitHub</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Программа WebTestMON</h1>
+        <p class="lead">Программа была мною создана для тестирования монитора. Сделана с использованием Web Technologis</p>
+        <p class="lead">
+          <a class="btn btn-lg btn-secondary" href="{{ url_for('menu') }}">Приступаем?</a>
+        </p>
+      </main>
+
+
+
+
+
+
+
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
+{% block footer %}
+    <p><a href="{{ url_for('index') }}">Index</a></p>
+    <p><a href="{{ url_for('page3') }}">Page3</a></p>
+{% endblock %}
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM stress test | anime.js</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:title" content="anime.js">
+  <meta property="og:url" content="https://animejs.com">
+  <meta property="og:description" content="Javascript Animation Engine">
+  <meta property="og:image" content="https://animejs.com/documentation/assets/img/icons/og.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="anime.js">
+  <meta name="twitter:site" content="@juliangarnier">
+  <meta name="twitter:description" content="Javascript Animation Engine">
+  <meta name="twitter:image" content="https://animejs.com/documentation/assets/img/icons/twitter.png">
+
+
+
+  <script type="text/javascript" src="{{ url_for('static', filename='js/anime.min.js') }}"></script>
+  <link href="{{ url_for('static', filename='css/documentation.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='img/social-media-image.png') }}" rel="icon">
+  <link href="../assets/css/documentation.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="../../lib/anime.min.js"></script>
+  <!-- <script src="../assets/js/anime/anime.2.0.2.js"></script> -->
+  <!-- <script src="../assets/js/anime/anime.1.0.js"></script> -->
+
+  <style>
+
+    .el {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1em;
+      height: 1em;
+      margin: -.5em 0 0 -.5em;
+      font-size: 20px;
+    }
+
+  </style>
+</head>
+<body></body>
+<script>
+
+  var wrapperEl = document.body;
+  var numberOfEls = 500;
+  var duration = numberOfEls * 10;
+  var radius = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
+  var distance = (radius / 4 <= 150 ? 150 : radius / 2.5) / 16;
+
+  function createEl(i) {
+    var el = document.createElement('div');
+    var hue = Math.round(360 / numberOfEls * i);
+    el.classList.add('el');
+    //el.style.border = '5px solid hsl(' + hue + ', 50%, 50%)';
+    el.style.backgroundColor = 'hsl(' + hue + ', 50%, 50%)';
+    wrapperEl.appendChild(el);
+    anime({
+      targets: el,
+      translateX: Math.sin(i) * distance + 'rem',
+      translateY: Math.cos(i) * distance + 'rem',
+      scale: [
+        {value: [.1, 2]},
+        {value: .1}
+      ],
+      easing: 'easeInOutSine',
+      loop: true,
+      duration: duration,
+      delay: i * (duration / numberOfEls)
+    });
+  };
+
+  for (var i = 0; i < numberOfEls; i++) createEl(i);
+
+  </script>
+  <script src="../assets/js/vendors/stats.min.js"></script>
+
+<div class="btn-group" role="group" aria-label="...">
+    <a href="{{ url_for('page6') }}"><button type="button" class="btn btn-default">6</button></a>
+    <a href="{{ url_for('page2') }}"><button type="button" class="btn btn-default">7</button></a>
+    <a href="{{ url_for('ColorBlack') }}"><button type="button" class="btn btn-default">8</button></a>
+</div>
+
+</html>
